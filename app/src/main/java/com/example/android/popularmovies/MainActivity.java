@@ -25,4 +25,5 @@ public class  MainActivity extends AppCompatActivity {
 
         mMovieGrid.setAdapter(mAdapter);
     }
+    //just checking
 }
