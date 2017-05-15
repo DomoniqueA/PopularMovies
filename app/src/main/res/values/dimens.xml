@@ -1,5 +1,10 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="land_back_width">322dp</dimen>
+    <dimen name="land_back_height">171dp</dimen>
+    <dimen name="land_poster_width">121dp</dimen>
+    <dimen name="land_poster_height">168dp</dimen>
+    <dimen name="my_default_margin">8dp</dimen>
+    <item name="bottom_constraint" type="dimen">99%</item>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
