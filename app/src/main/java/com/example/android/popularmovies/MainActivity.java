@@ -2,6 +2,7 @@ package com.example.android.popularmovies;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
     public ArrayList<MoviePOJO> films;
     private MovieAdapter mAdapter;
     private FilmResponsePOJO responsePojoSave;
+    private SQLiteDatabase fmDB;
 
     private int numberOfColumns() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -118,6 +120,16 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
                 }
             });
         }
+        if (sortOrder.equals("favourites")) {
+            if (fmDB == null) {
+                Toast toast;
+                String ToastMessage = "Add Favourites To See Them Here";
+                toast = Toast.makeText(MainActivity.this, ToastMessage, Toast.LENGTH_LONG);
+                toast.show();
+            } else {
+
+            }
+        }
     }
 
 
@@ -142,6 +154,9 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
             initRetrofitNetworkCalls();
 
             Toast.makeText(context, getString(R.string.top_toast), Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.favourites_sort) {
+            sortOrder = "favourites";
+            initRetrofitNetworkCalls();
         }
 
         return super.onOptionsItemSelected(item);
@@ -155,5 +170,10 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         Intent intentStartDetail = new Intent(context, destinationClass);
         intentStartDetail.putExtra(EXTRA_MOVIEPOJO, clickedMovie);
         startActivity(intentStartDetail);
+    }
+
+    //initialize database here.
+    public void initialiseFavourites() {
+        //fmDB = (SQLiteDatabase) FavouriteColumns;
     }
 }
