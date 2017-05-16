@@ -11,10 +11,6 @@ import com.example.android.popularmovies.data.TrailerPOJO;
 
 import java.util.ArrayList;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link TrailerPOJO} and makes a call to the
- * specified {@link }.
- */
 public class TrailersAdapter extends RecyclerView.Adapter<TrailersAdapter.TrailerViewHolder> {
 
     private final TrailerAdapterOnClickHandler tClickHandler;

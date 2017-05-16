@@ -14,4 +14,10 @@
         android:title="@string/sort_by_top_rated"
         android:visible="true"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/favourites_sort"
+        android:checkable="false"
+        android:title="@string/sort_by_top_rated"
+        android:visible="true"
+        app:showAsAction="never" />
 </menu>
